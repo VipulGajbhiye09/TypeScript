@@ -9,14 +9,20 @@
 //Types in TypeScript : number, boolean, string, null, undefined, void, Object, Array, Tuples
 //Few Special types in TS : any, never, unknown
 
+//Type inference is a feature of TypeScript that allows the compiler to automatically determine the types of variables, functions, and expressions.
+//This can save you a lot of time and effort when writing code
+
+// Syntax for TypeScript
+//let var_name : type = value;
+
 //string
-let greeting: string = "Hello I'm Vipul";
+let greeting : string = "Hello I'm Vipul";
 console.log(greeting);
 
 //number
-let myNum: number = 81.5;
+let myNum : number = 81.5;
 console.log(myNum);
 //boolean
 
-let isLoggedIn: boolean = true;
+let isLoggedIn : boolean = true;
 console.log(isLoggedIn);
