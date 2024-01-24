@@ -6,8 +6,8 @@ const vipulObj = {
     isActive: true
 }
 // Syntax for passing obj to function
-function createUser({name: string, isPaid: boolean}){
-    console.log("created user");
+function create_user({ name, isPaid }: { name: string; isPaid: boolean }) {
+    console.log("user created")
 }
 
 // ODD BEHAVIOR OF OBJECTS
@@ -17,7 +17,7 @@ function createUser({name: string, isPaid: boolean}){
 
 // Odd part is by declaring it as a variable then passing that var to func is accepted as shown below
 let newUser = { name: "vipul", isPaid: false, email: "v@v.com" };
-createUser(newUser)
+create_user(newUser)
 
 // Return obj from function
 function createCourse():{name: string, price: number}{
