@@ -28,3 +28,46 @@ function identityFour <T> (val: T) : T {
   return val;
 }
 
+// Passing interface or type alias also works
+interface Backpack {
+  brand: string;
+  color: number;
+}
+// passing backpack 
+identityFour <Backpack> ( {brand:"test",color:5} )
+
+
+// Example of generic with multiple generic type
+function createPair<S, T>(v1: S, v2: T): [S, T] {
+  return [v1, v2];
+}
+console.log(createPair<string, number>('hello', 42)); // ['hello', 42]
+
+// Accepting array parameter in generic
+function getProducts<T>(products: T[]): T {
+  // do some operations
+  const myIndex = 3;
+  return products[myIndex];
+}
+
+// Arrow function version of above function
+const getMoreProducts = <T>(products: T[]): T => {
+  //do some operations
+  const myIndex = 4;
+  return products[myIndex];
+};
+
+// 
+
+interface Database {
+  username: string;
+  password: string;
+}
+
+function getData<T, U extends Database>(v1: T, v2: U): object {
+  return {
+    v1,v2
+  };
+}
+
+getData(3,{username:"test",password:"test",connectionId:"test"});
