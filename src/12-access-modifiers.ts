@@ -1,5 +1,7 @@
 // public access allows access beyond class definition whereas private restricts it to class only
 
+// protected keyword allows property access to inherited child classes
+
 // Specifying access modifier in constructor like so produces same js code as the class example commented below it
 // Hence increasing code readability
 
