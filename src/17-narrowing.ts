@@ -26,3 +26,33 @@ function provideId(id: string | null) {
   }
   id.toLowerCase();
 }
+
+// in operator narrowing
+interface User2 {
+  name: string;
+  email: string;
+}
+
+interface Admin2 {
+  name: string;
+  email: string;
+  isAdmin: boolean;
+}
+
+function isAdminAccount(account: User2 | Admin2) {
+  if ("isAdmin" in account) {
+    return account.isAdmin;
+  }
+}
+
+// instanceof narrowing
+
+function logValue(x: Date | string) {
+  if (x instanceof Date) {
+    console.log(x.toUTCString());
+  } else {
+    console.log(x.toUpperCase());
+  }
+}
+
+
